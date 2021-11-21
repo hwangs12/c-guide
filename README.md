@@ -17,21 +17,42 @@
 
 > No, first of all there are following format specifiers in c:
 
-| Specifier   | Description |
-| ----------- | ----------- |
-| %c      | a single character       |
-| %s   | a string        |
-| %hi   | short (signed)        |
-| %hu   | short (unsigned)        |
-| %Lf   | long double        |
-| %n   | prints nothing        |
-| %d   | a decimal integer (assumes base 10)        |
-| %i   | a decimal integer (detects the base automatically)        |
-| %o   | an octal (base 8) integer        |
-| %x   | a hexadecimal (base 16) integer        |
-| %p   | an address (or pointer)        |
-| %f   | a floating point number for floats        |
-| %u   | int unsigned decimal        |
-| %e   | a floating point number in scientific notation        |
-| %E   | a floating point number in scientific notation        |
-| %%   | the % symbol        |
+| Specifier   | Description                                       |
+| ----------- | ------------------------------------------------- |
+| %c          | a single character                                |
+| %s          | a string                                          |
+| %hi         | short (signed)                                    |
+| %hu         | short (unsigned)                                  |
+| %Lf         | long double                                       |
+| %n          | prints nothing                                    |
+| %d          | a decimal integer (assumes base 10)               |
+| %i          | a decimal integer (detects the base automatically)|
+| %o          | an octal (base 8) integer                         |    
+| %x          | a hexadecimal (base 16) integer                   |
+| %p          | an address (or pointer)                           |
+| %f          | a floating point number for floats                |
+| %u          | int unsigned decimal                              |
+| %e          | a floating point number in scientific notation    |
+| %E          | a floating point number in scientific notation    |
+| %%          | the % symbol                                      |
+
+## What are the order of operations in C?
+
+| Priority    | Operation                 |
+| ----------- | ------------------------- |
+| 1           | ++                        |
+| 1           | – (negative)              |
+| 1           | ()                        |
+| 2           | !                         | 
+| 2           | (typecast)                |
+| 3           | *                         |
+| 3           | /                         |
+| 3           | %                         |
+| 4           | +                         |
+| 4           | - (minus)                 |
+| 5           | <, <=                     |
+| 5           | >, >=                     |
+| 6           | ==, !=                    |
+| 7           | &&                        |
+| 8           | \|\|                      |
+| 9           | all assignment operators  |
